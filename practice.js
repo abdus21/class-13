@@ -4,8 +4,6 @@ const clock = document.getElementById('clock');
 
 clock.setAttribute('class', 'text-center')
 
-
-    
         setInterval(function (){
 
             let date = new Date();
@@ -20,98 +18,10 @@ clock.setAttribute('class', 'text-center')
             }else{
                 h = hours-12
             }
-
-            clock.innerHTML = `${ampa(h)}:${ampa(minit)}:${ampa(second)}:${hours >= 12 ? 'PM' : 'AM'}`;
+            
+            clock.innerHTML = ` <p class="second">${ampa(second)}</p><p style="color:red">${ampa(h)}:${ampa(minit)}</p><p style="display: inline-block;" class="possitionig">${date.getMonth() + 1}/</p><p style="display: inline-block;" class="possitionig">${date.getDate()}/</p><p style="display: inline-block;" class="possitionig">${date.getFullYear()}</p><p style="display: inline-block; font-size: 18px;margin-right:80px;margin-bottum:10px;position: relative;">${mdy(date.getDay())}</p> <h6 class="clockh6">${hours >= 12 ? 'PM' : 'AM'}</h6>`;
         },1000);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const form = document.getElementById('form');
-
-const marriage_check = document.getElementById('marriage_check')
-const marriage_result = document.getElementById('marriage_result');
-
-
-const namee = form.querySelector('input[placeholder="Name"]');
-
-const nameResult = namee.nextElementSibling;
-
-const Year = form.querySelector('input[placeholder="Year"]');
-
-
-
-marriage_check.addEventListener('click', () =>{
-
-
-    let gender = form.querySelector('input[type="radio"]:checked');
-
-    if(namee.value == '' || Year.value == '' || gender.value == ''){
-        marriage_result.innerHTML = '<p class="alert-danger p-2">All fields are required</p>'
-    }else{
-        marriage_result.innerHTML = agecal2(namee.value,Year.value,gender.value)
-    }
-
-    setTimeout(function (){
-        marriage_result.innerHTML = '';
-    },3000);
-
-    console.log(gender.value)
-    namee.value = '';
-    Year.value = '';
-    gender.value = '';
-})
-
-namee.addEventListener('keyup', () =>{
-    nameResult.innerHTML = '';
-    if(namee.value == ''){
-        namee.nextElementSibling.innerHTML = '<p>plz set year</p>';
-        namee.nextElementSibling.setAttribute('class', 'text-black')
-    }else if(/^[a-zA-Z ]*$/.test(namee.value) == false){
-        namee.nextElementSibling.innerHTML = '<p>number not allow</p>';
-
-        namee.nextElementSibling.setAttribute('class', 'text-danger')
-    }
-    else{
-        namee.nextElementSibling.innerHTML = '';
-    };
-})
-
-
-Year.addEventListener('keyup', () =>{
-
-    if(Year.value == ''){
-        Year.nextElementSibling.innerHTML = '<p>plz set yaer</p>'
- }else if(/^[0-9]*$/.test(Year.value) == false){
-    Year.nextElementSibling.innerHTML = '<p style="color:red">character not allow</p>'
- } else{
-    Year.nextElementSibling.innerHTML='';
-    
- };
-})
-
-
-
-
-/**
- * 
- */
 
 
 

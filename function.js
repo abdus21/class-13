@@ -10,7 +10,12 @@ function ampa(gonta){
 }
 
 
+function mdy(index){
 
+  const day = ['Sun','Mon','Tues','wed','Thur','Fri','Satu'];
+  return day[index];
+
+}
 
 
 

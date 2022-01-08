@@ -3,9 +3,40 @@
     margin: 0;
 }
 
-#clock{
-    font-size: 50px;
-    font-weight: 500;
+@font-face{
+    src: url(conts/digital-7.ttf);
+    font-family: digital-7;
 }
 
+#clock{
+    background: url(images.png) no-repeat;
+    background-size: cover;
+    background-position: 10px -75px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: digital-7;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+.second{
+    margin-bottom: -10px;
+    margin-top: 20px;
+    color: rgb(214, 231, 136);
+}
+.clockh6{
+    position: absolute;
+    right: 120px;
+    bottom: 220px;
+}
 
+.possitionig{
+    position: relative;
+    right: -30px;
+    top: -43px;
+    font-size: 28px;
+    color: rgb(15, 228, 15);
+}
