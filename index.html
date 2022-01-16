@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 
     <div class="container mt-5">
         <div class="row">
@@ -25,12 +25,112 @@
     </div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h2>Counter with Loader</h2>
+               
+                <div class="form-group mb-4">
+                    <input type="text" placeholder="type number" id="input_count">
+                </div>
+                   <button class="btn btn-success" id="start">Start</button>
+                   <button class="btn btn-danger" id="stop">Stop</button>
+                   <button class="btn btn-secondary" id="reset">Reset</button>
+                   <hr>
+                   <div class="laod" style="border: 1px solid green; border-radius: 100px;">
+                       <div class="loader"></div>
+                   </div>
+                   <hr>
+                   <h1 style="font-size: 100px; text-align: center;" id="counter-result">0</h1>
+               
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h3>Basic TO-DO App</h3>
+                <div class="form-inline">
+                        <input type="text" id="input">
+                        <input type="submit" id="add" value="add" class="btn btn-primary">
+                </div> 
+                <hr>
+                <div id="list"">
+
+
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5" id="marks_form">
+                <h3 id="error_massege" class="mb-4"></h3>
+                <form action="">
+                    <div class="form-group mb-3">
+                        <input type="text" id="bn" class="form-control" placeholder="type marks">
+                        <label for="bn">Bangla</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="en" class="form-control" placeholder="type marks">
+                        <label for="en">English</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="math" class="form-control" placeholder="type marks">
+                        <label for="math">math</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="Religion" class="form-control" placeholder="type marks">
+                        <label for="Religion">Religion</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="Science" class="form-control" placeholder="type marks">
+                        <label for="Science">Science</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="submit" value="submit" class="btn btn-primary form-control" id="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-2">
+                
+                </div>
+            <div class="col-lg-5 text-center">
+                <h1 class="text-center bg-warning p-2" style=font-family:poppins;">Subject Marks app</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>subject</th>
+                            <th>marks</th>
+                            <th>GPA</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+                <h4 id="cgpa"></h4>
+            </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+   
+
+
 <br>
 <br>
 <br>
@@ -42,7 +142,12 @@
 <br>
 <br>
 
-<script src="function.js"></script>
-    <script src="practice.js"></script>
+
+     <script src="function.js"></script>
+     <script src="digital-clock.js"></script>
+     <script src="Counter-with-Loader.js"></script>
+     <script src="Basic-TO-DO-App.js"></script>
+     <script src="Subject-Marks-app.js"></script>
+     <script src="practice.js"></script>
 </body>
 </html>
